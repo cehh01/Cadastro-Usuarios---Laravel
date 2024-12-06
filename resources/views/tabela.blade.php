@@ -234,7 +234,7 @@
                                                 </div>
                                                 <div class="mb-3 col">
                                                     <label for="data_nascimento" class="form-label">Data de Nascimento</label>
-                                                    <input type="date" name="data_nascimento" id="data_nascimento"
+                                                    <input type="text" name="data_nascimento" id="data_nascimento"
                                                         class="form-control" placeholder="{{ $usuario->data_nascimento }}"
                                                         disabled>
                                                 </div>
@@ -321,17 +321,26 @@
                                                         <label for="nome" class="form-label">Nome</label>
                                                         <input type="text" name="nome" id="nome" class="form-control"
                                                             value="{{$usuario->nome}}" required>
+                                                        @error('nome')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="data_nascimento" class="form-label">Data de
                                                             Nascimento</label>
                                                         <input type="date" name="data_nascimento" id="data_nascimento"
                                                             class="form-control" value="{{$usuario->data_nascimento}}" required>
+                                                        @error('data_nascimento')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="cpf" class="form-label">CPF</label>
                                                         <input type="text" name="cpf" id="cpf" class="form-control"
                                                             value="{{$usuario->cpf}}" required>
+                                                        @error('cpf')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
 
@@ -341,11 +350,17 @@
                                                         <label for="telefone" class="form-label">Telefone</label>
                                                         <input type="text" name="telefone" id="telefone" class="form-control"
                                                             value="{{$usuario->telefone}}" required>
+                                                        @error('telefone')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="email" class="form-label">Email</label>
                                                         <input type="email" name="email" id="email" class="form-control"
                                                             value="{{$usuario->email}}" required>
+                                                        @error('email')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -354,16 +369,25 @@
                                                         <label for="rua" class="form-label">Rua</label>
                                                         <input type="text" name="rua" id="rua" class="form-control"
                                                             value="{{$usuario->rua}}" required>
+                                                        @error('rua')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="numero" class="form-label">Número</label>
                                                         <input type="text" name="num_endereco" id="num_endereco"
                                                             class="form-control" value="{{$usuario->num_endereco}}" required>
+                                                        @error('num_endereco')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="bairro" class="form-label">Bairro</label>
                                                         <input type="text" name="bairro" id="bairro" class="form-control"
                                                             value="{{$usuario->bairro}}" required>
+                                                        @error('bairro')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
 
@@ -372,11 +396,17 @@
                                                         <label for="cidade" class="form-label">Cidade</label>
                                                         <input type="text" name="cidade" id="cidade" class="form-control"
                                                             value="{{$usuario->cidade}}" required>
+                                                        @error('cidade')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                     <div class="mb-3 col">
                                                         <label for="cep" class="form-label">CEP</label>
                                                         <input type="text" name="cep" id="cep" class="form-control"
                                                             value="{{$usuario->cep}}" required>
+                                                        @error('cep')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
 
                                                 </div>

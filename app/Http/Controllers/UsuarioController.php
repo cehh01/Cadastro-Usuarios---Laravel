@@ -8,6 +8,8 @@ use App\Models\Usuario;
 
 use App\Models;
 
+use Illuminate\Validation\Rule;
+
 class UsuarioController extends Controller
 {
     public function tabela()
@@ -76,9 +78,9 @@ class UsuarioController extends Controller
         $request->validate([
             'nome' => 'required',
             'data_nascimento' => 'required|date',
-            'cpf' => 'required|cpf|unique:usuarios,cpf',
+            'cpf' => 'required|cpf|',
             'telefone' => 'required|celular_com_ddd',
-            'email' => 'required|email|unique:usuarios,email',
+            'email' => 'required|email|',
             'rua' => 'required',
             'num_endereco' => 'required|numeric',
             'bairro' => 'required',
